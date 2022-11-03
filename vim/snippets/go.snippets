@@ -1,0 +1,38 @@
+snippet jsont "JSON Tag to use struct" wA
+\`json:"$1"\`
+endsnippet
+
+# shorthand variable declaration
+snippet : "v := value"
+${1} := ${0}
+endsnippet
+
+# break
+snippet br "break"
+break
+endsnippet
+
+# channel
+snippet ch "chan Type"
+chan ${0:int}
+endsnippet
+
+# import
+snippet import "import ( ... )"
+import (
+    "${1:package}"
+)
+endsnippet
+
+# err normal
+snippet err "Error return"
+if err != nil {
+    return
+}
+endsnippet
+
+snippet frange "for _, x := range foo"
+for ${1:i}, ${2:foo} := range ${3:bar} {
+	${0}
+}
+endsnippet

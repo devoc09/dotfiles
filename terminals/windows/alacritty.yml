@@ -1,0 +1,97 @@
+shell:
+    program: /Windows/System32/wsl.exe ~ -d Ubuntu-20.04
+
+window:
+    dimentsions:
+      culumns: 0
+      lines: 1
+
+    padding:
+        x: 5
+    # Borders and title bar
+    # decorations: none
+
+# background_opacity: 0.9
+
+font:
+
+    size: 10
+
+    normal:
+        family: "JetBrains Mono NL"
+    bold:
+        family: "JetBrains Mono NL"
+    italic:
+        family: "JetBrains Mono NL"
+        # family: HackGenNerd
+    offset:
+      y: 1
+env:
+    TERM: xterm-256color
+# # Colors (Srcery)
+# colors:
+#   # Default colors
+#   primary:
+    # background: '#1c1b19'
+    # foreground: '#fce8c3'
+
+#   # Cursor colors
+#   cursor:
+#     text: CellBackground
+#     cursor: '#fbb829'
+
+#   # Normal colors
+#   normal:
+#     black:   '#1c1b19'
+#     red:     '#ef2f27'
+#     green:   '#519f50'
+#     yellow:  '#fbb829'
+#     blue:    '#2c78bf'
+#     magenta: '#e02c6d'
+
+#     cyan:    '#0aaeb3'
+#     white:   '#d0bfa1'
+
+#   # Bright colors
+
+#   bright:
+
+#     black:   '#918175'
+#     red:     '#f75341'
+#     green:   '#98bc37'
+#     yellow:  '#fed06e'
+
+#     blue:    '#68a8e4'
+#     magenta: '#ff5c8f'
+#     cyan:    '#53fde9'
+#     white:   '#fce8c3'
+# Colors (Monokai Dark)
+
+colors:
+  # Default colors
+  primary:
+
+    background: '#1b1d1e'
+    foreground: '#F8F8F2'
+
+  # Normal colors
+  normal:
+   black:   '#272822'
+   red:     '#F92672'
+   green:   '#A6E22E'
+   yellow:  '#F4BF75'
+   blue:    '#66D9EF'
+   magenta: '#AE81FF'
+   cyan:    '#A1EFE4'
+   white:   '#F8F8F2'
+
+  # Bright colors
+  bright:
+   black:   '#75715E'
+   red:     '#F92672'
+   green:   '#A6E22E'
+   yellow:  '#F4BF75'
+   blue:    '#66D9EF'
+   magenta: '#AE81FF'
+   cyan:    '#A1EFE4'
+   white:   '#F9F8F5'

@@ -10,7 +10,6 @@ starshipset:
 	ln -sf ~/dotfiles/shell/starship.toml ~/.config/starship.toml
 tmuxset:
 	mkdir -p ~/.tmux
-	ln -sf ~/dotfiles/tmux/srcery-tmux-master ~/.tmux/srcery-tmux-master
 	cp ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 vimset:
 	# vim

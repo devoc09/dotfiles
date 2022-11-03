@@ -50,21 +50,21 @@ export TERM=xterm-256color
 
 # SETUP PROMPT
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats "%F{cyan}%b%f"
+zstyle ':vcs_info:*' formats "%F{red}%b%f"
 precmd () {vcs_info}
-PROMPT="%F{green}%~ %{$reset_color%}"
+PROMPT="%F{cyan}%~ %{$reset_color%}"
 
 function git_changes() {
     if test "$(git rev-parse --si-inside-work-tree = true 2> /dev/null)"; then
         git_pwd="$(basename -- "$(git rev-parse --show-toplevel)")"/"$(git rev-parse --show-prefix)"
         git_pwd_trim="$(echo ${git_pwd/%?/})"
         if test -z "$(git status --porcelain 2> /dev/null)"; then
-            PROMPT='%F{green}${git_pwd_trim} ${vcs_info_msg_0_}%{$reset_color%} '
+            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_}%{$reset_color%} '
         else
-            PROMPT='%F{green}${git_pwd_trim} ${vcs_info_msg_0_} %F{red}X%{$reset_color%} '
+            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_} %F{yellow}X%{$reset_color%} '
         fi
     else
-        PROMPT="%F{green}%~ %{$reset_color%}"
+        PROMPT="%F{cyan}%~ %{$reset_color%}"
     fi
 }
 

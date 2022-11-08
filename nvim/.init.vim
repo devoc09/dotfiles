@@ -195,4 +195,6 @@ tnoremap <silent><C-j> <C-\><C-n>
 " enhanced vimgrep auto cmd '| cw'
 autocmd QuickFixCmdPost *grep* cwindow
 
+command! -count -nargs=* Path :echo expand('%s')
+
 filetype on

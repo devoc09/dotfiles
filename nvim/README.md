@@ -1,6 +1,12 @@
 # Setup help
 
 ## Windows
+- Important!
+
+```
+git config --global core.autocrlf true
+```
+
 - make directory to configure neovim
 
 ```

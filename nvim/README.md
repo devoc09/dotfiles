@@ -20,3 +20,12 @@ mklink %USERPROFILE%\AppData\Local\nvim\init.vim %USERPROFILE%\dotfiles\nvim\.in
 ```
 mklink /D %USERPROFILE%\AppData\Local\nvim\_config %USERPROFILE%\dotfiles\nvim\_config
 ```
+
+## WSL
+- Disable sharing $PATH
+```
+// /etc/wsl.conf 
+
+[interop]
+appendWindowsPath = false
+```

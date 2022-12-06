@@ -14,6 +14,15 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = { noremap=true, silent=true }
 
+  -- format on save
+  if client.server_capabilities.documentFormattingProvider then
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = vim.api.nvim_create_augroup("Format", { clear = true }),
+      buffer = bufnr,
+      callback = function() vim.lsp.buf.format(nil, nil, true, nil, nil, nil) end
+    })
+  end
+
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', '@', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -88,5 +97,5 @@ end
 
 EOF
 
-autocmd BufWritePre *.go\|rs lua vim.lsp.buf.format(nil, nil, true, nil, nil, nil)
+" autocmd BufWritePre *.go\|rs lua vim.lsp.buf.format(nil, nil, true, nil, nil, nil)
 autocmd BufWritePre *.go lua OrgImports(1000)

@@ -16,11 +16,11 @@ window:
 font:
     size: 13
     normal:
-        family: "JetBrains Mono NL"
+        family: "Cica"
     bold:
-        family: "JetBrains Mono NL"
+        family: "Cica"
     italic:
-        family: "JetBrains Mono NL"
+        family: "Cica"
         # family: HackGenNerd
     offset:
       y: 1

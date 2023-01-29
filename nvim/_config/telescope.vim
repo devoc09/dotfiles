@@ -1,11 +1,13 @@
 UsePlugin 'telescope.nvim'
 
 if getftype(".git") == "dir"
-    nnoremap <C-f> <cmd>Telescope git_files<cr>
+  nn <C-f> <cmd>Telescope git_files<cr>
+  nn <C-s> <cmd>Telescope git_status<cr>
 else
-    nnoremap <C-f> <cmd>Telescope find_files<cr>
+  nn <C-f> <cmd>Telescope find_files<cr>
 endif
-nnoremap <C-p> <cmd>Telescope live_grep<cr>
+nn <C-p> <cmd>Telescope live_grep<cr>
+nn <C-b> <cmd>lua require('telescope.builtin').treesitter()<cr>
 
 lua << EOF
 require('telescope').setup{
@@ -19,6 +21,9 @@ require('telescope').setup{
             theme = "ivy",
         },
         git_files = {
+            theme = "ivy",
+        },
+        git_status = {
             theme = "ivy",
         },
         live_grep = {

@@ -83,7 +83,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
 " easy way to cursol-move
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
 
 " japanese input method
 " Plug 'vim-skk/eskk.vim'

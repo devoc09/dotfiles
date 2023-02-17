@@ -19,6 +19,13 @@ zinit light z-shell/fast-syntax-highlighting
 # plugins end
 
 # Alias
+if [[ -e $HOME/.cargo/bin/coreutils ]]; then
+    coreutils=("base32" "base64" "basename" "basenc" "cat" "chcon" "chgrp" "chmod" "chown" "chroot" "cksum" "comm" "cp" "csplit" "cut" "dircolors" "dirname" "du" "echo" "env" "expand" "factor" "false" "fmt" "fold" "groups" "hashsum" "head" "hostid" "hostname" "id" "kill" "link" "ln" "logname" "ls" "mkdir" "mkfifo" "mknod" "mktemp" "mv" "nice" "nl" "nohup" "nproc" "paste" "pathchk" "pinky" "ptx" "pwd" "readlink" "realpath" "relpath" "rm" "rmdir" "runcon" "seq" "shred" "shuf" "sleep" "stat" "stdbuf" "sum" "sync" "tee" "timeout" "touch" "tr" "true" "truncate" "tsort" "tty" "uname" "unexpand" "uniq" "unlink" "uptime" "users" "wc" "who" "whoami" "yes" "date" "tail" "more" "df" "dd" "test")
+    for i in $coreutils; do
+        alias $i="coreutils ${i}"
+    done
+fi
+
 ## set color for ls command
 autoload -Uz colors; colors
 autoload -Uz add-zsh-hook

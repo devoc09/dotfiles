@@ -5,6 +5,9 @@ zshset:
 	# cp ~/dotfiles/zsh/.zshrc ~/.zshrc
 	# source ~/.zshrc
 	sh ~/dotfiles/zsh/setup.sh
+	mkdir -p ~/bin
+	ln -sf ~/dotfiles/bin/* ~/bin/
+	chmod 755 ~/dotfiles/bin/*
 starshipset:
 	mkdir -p ~/.config
 	ln -sf ~/dotfiles/shell/starship.toml ~/.config/starship.toml

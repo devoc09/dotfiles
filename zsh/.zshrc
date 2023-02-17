@@ -55,6 +55,9 @@ export TERM=xterm-256color
 # rust
 # export PATH="$HOME/.cargo/bin:$PATH"
 
+# executes
+export PATH=$PATH:"$HOME/bin"
+
 # SETUP PROMPT
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "%F{red}%b%f"

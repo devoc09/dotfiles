@@ -69,7 +69,7 @@ Plug 'hrsh7th/cmp-nvim-lua', {'for': 'lua'}
 Plug 'dcampos/cmp-snippy'
 
 " auto-pairs
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " tig
 " Plug 'devoc09/vim-tig', { 'on': 'Tig' }

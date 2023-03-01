@@ -3,6 +3,7 @@ UsePlugin 'fern.vim'
 nnoremap <silent>sf :Fern . <CR>
 
 let g:fern#renderer#default#leaf_symbol = "  "
+let g:fern#renderer#default#leading = "  "
 let g:fern#renderer#default#collapsed_symbol = "▸ "
 let g:fern#renderer#default#expanded_symbol = "▾ "
 let g:fern#disable_default_mappings = 1

@@ -7,6 +7,7 @@ let g:fern#renderer#default#leading = "  "
 let g:fern#renderer#default#collapsed_symbol = "▸ "
 let g:fern#renderer#default#expanded_symbol = "▾ "
 let g:fern#disable_default_mappings = 1
+let g:fern#default_hidden = 1
 
 function! s:init_fern() abort
     nmap <buffer><silent>n <Plug>(fern-action-new-dir)

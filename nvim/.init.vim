@@ -152,8 +152,6 @@ nmap <silent> sv :vsplit<Return>
 nmap <silent> st :tabnew<Return>
 
 " Remap key
-inoremap <C-j> <C-[>
-vnoremap <C-j> <C-[>
 nnoremap <S-h> ^
 nnoremap <S-l> $
 nnoremap <S-k> {

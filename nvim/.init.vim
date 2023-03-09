@@ -191,7 +191,6 @@ command! -count -nargs=* Vsterm call s:vsplitTerm()
 command! -count -nargs=* Sterm call s:splitTerm()
 nmap <silent> tt :Vsterm<CR>
 nmap <silent> ts :Sterm<CR>
-tnoremap <silent><C-j> <C-\><C-n>
 
 " enhanced vimgrep auto cmd '| cw'
 autocmd QuickFixCmdPost *grep* cwindow

@@ -1,7 +1,8 @@
 UsePlugin 'telescope.nvim'
 
 if getftype(".git") == "dir"
-  nn <C-f> <cmd>Telescope git_files<cr>
+  " nn <C-f> <cmd>Telescope git_files<cr>
+  nn <C-f> <cmd>Telescope find_files<cr>
   nn <C-s> <cmd>Telescope git_status<cr>
 else
   nn <C-f> <cmd>Telescope find_files<cr>

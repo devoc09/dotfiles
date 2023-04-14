@@ -14,13 +14,13 @@ window:
 # background_opacity: 0.9
 
 font:
-    size: 13
+    size: 14
     normal:
-        family: "JetBrains Mono NL"
+        family: "UDEV Gothic 35"
     bold:
-        family: "JetBrains Mono NL"
+        family: "UDEV Gothic 35"
     italic:
-        family: "JetBrains Mono NL"
+        family: "UDEV Gothic 35"
         # family: HackGenNerd
     offset:
       y: 1

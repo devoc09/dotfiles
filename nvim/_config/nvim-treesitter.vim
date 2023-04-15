@@ -10,10 +10,12 @@ require'nvim-treesitter.configs'.setup {
         "rust",
         "python",
         "lua",
+        "zig",
+        "hcl",
         "php"
     },
     highlight = {
-        enable = false,
+        enable = true,
     },
     endwise = {
         enable = true,

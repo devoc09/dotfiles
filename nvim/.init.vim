@@ -48,11 +48,6 @@ Plug 'alvan/vim-closetag', {'for': ['html','xml']}
 Plug 'devoc09/uuid'
 Plug 'devoc09/nvim_hugo_date'
 
-" Filer
-Plug 'lambdalisue/fern.vim'
-Plug 'lambdalisue/fern-hijack.vim'
-" Plug 'ryanoasis/vim-devicons'
-
 " Snippet
 " Plug 'SirVer/ultisnips'
 Plug 'dcampos/nvim-snippy'

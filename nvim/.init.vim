@@ -102,7 +102,7 @@ command! -nargs=1 UsePlugin if !FindPlugin(<args>) | finish | endif
 runtime! _config/*.vim
 
 " set number
-set showtabline=2
+set showtabline=0
 set laststatus=0 " hidden status line
 
 set cursorline

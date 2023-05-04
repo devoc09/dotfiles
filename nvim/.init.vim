@@ -28,7 +28,7 @@ Plug 'RRethy/nvim-treesitter-endwise'
 " Plug 'devoc09/lightline.vim'
 
 " plugin to use lightline and git
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " lsp-client
 Plug 'neovim/nvim-lspconfig'

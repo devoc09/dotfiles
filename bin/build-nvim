@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# delete installed neovim
+sudo rm -rf $(which nvim)
+
+# move directory to neovim
+cd "$(ghq list -p | grep neovim)"
+
+# pull latest source
+git pull origin master
+
+# Build
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+# Install
+sudo make install

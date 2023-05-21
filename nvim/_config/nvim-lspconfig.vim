@@ -63,7 +63,7 @@ nvim_lsp.tsserver.setup {
     cmd = {"typescript-language-server", "--stdio"},
     filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
 }
-nvim_lsp['pyright'].setup {
+nvim_lsp['pylsp'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }

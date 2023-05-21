@@ -49,6 +49,7 @@ Plug 'devoc09/uuid'
 Plug 'devoc09/nvim_hugo_date'
 Plug 'tpope/vim-surround'
 Plug 'devoc09/gpt-trans.nvim', {'do': 'make'}
+Plug 'lilydjwg/colorizer'
 
 " Snippet
 " Plug 'SirVer/ultisnips'
@@ -67,9 +68,6 @@ Plug 'dcampos/cmp-snippy'
 " auto-pairs
 " Plug 'jiangmiao/auto-pairs'
 
-" tig
-" Plug 'devoc09/vim-tig', { 'on': 'Tig' }
-
 " FuzzyFinder
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
@@ -82,14 +80,11 @@ Plug 'nvim-lua/plenary.nvim'
 " Plug 'easymotion/vim-easymotion'
 Plug 'phaazon/hop.nvim'
 
-" japanese input method
-" Plug 'vim-skk/eskk.vim'
-
 " Local Plugins
-Plug '~/dotfiles/vim/togglewindow'
+" Plug '~/dotfiles/vim/togglewindow'
 " Plug '~/go/src/github.com/devoc09/uuid'
 " Plug '~/src/rust/nvim-compleet'
-" Plug '~/src/vim/vimscript/vim-tig'
+Plug '~/go/src/github.com/devoc09/yami_q_ray'
 
 call plug#end()
 
@@ -135,7 +130,8 @@ endif
 " set t_Co=256
 
 let g:rehash256 = 1
-colorscheme molokai
+" colorscheme molokai
+colorscheme yami_q_ray
 " opacity settings
 " highlight Normal ctermbg=NONE guibg=NONE
 " highlight NonText ctermbg=NONE guibg=NONE

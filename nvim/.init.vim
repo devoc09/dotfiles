@@ -18,7 +18,7 @@ set nofoldenable
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 " colorscheme
-Plug 'devoc09/molokai'
+Plug 'devoc09/yami_q_ray'
 
 "more beautiful and powerful syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -49,7 +49,7 @@ Plug 'devoc09/uuid'
 Plug 'devoc09/nvim_hugo_date'
 Plug 'tpope/vim-surround'
 Plug 'devoc09/gpt-trans.nvim', {'do': 'make'}
-Plug 'lilydjwg/colorizer'
+" Plug 'lilydjwg/colorizer'
 
 " Snippet
 " Plug 'SirVer/ultisnips'
@@ -84,7 +84,6 @@ Plug 'phaazon/hop.nvim'
 " Plug '~/dotfiles/vim/togglewindow'
 " Plug '~/go/src/github.com/devoc09/uuid'
 " Plug '~/src/rust/nvim-compleet'
-Plug '~/go/src/github.com/devoc09/yami_q_ray'
 
 call plug#end()
 
@@ -130,7 +129,6 @@ endif
 " set t_Co=256
 
 let g:rehash256 = 1
-" colorscheme molokai
 colorscheme yami_q_ray
 " opacity settings
 " highlight Normal ctermbg=NONE guibg=NONE

@@ -14,7 +14,7 @@ autoload -Uz _zinit
 
 # plugins
 zinit light zsh-users/zsh-autosuggestions
-zinit light z-shell/fast-syntax-highlighting
+# zinit light z-shell/fast-syntax-highlighting
 
 # plugins end
 

@@ -57,17 +57,17 @@ nvim_lsp.rust_analyzer.setup {
         },
     }
 }
-nvim_lsp.tsserver.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    cmd = {"typescript-language-server", "--stdio"},
-    filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
-}
-nvim_lsp['pylsp'].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-}
 nvim_lsp['denols'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+--nvim_lsp.tsserver.setup {
+--    on_attach = on_attach,
+--    capabilities = capabilities,
+--    cmd = {"typescript-language-server", "--stdio"},
+--    filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
+--}
+nvim_lsp['pylsp'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }

@@ -62,7 +62,7 @@ export PATH=$PATH:"$HOME/bin"
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "%F{red}%b%f"
 precmd () {vcs_info}
-PROMPT="%F{cyan}%~ %{$reset_color%}"
+PROMPT="%F{cyan}%~%f "
 
 function git_changes() {
     if test "$(git rev-parse --si-inside-work-tree = true 2> /dev/null)"; then

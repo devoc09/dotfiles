@@ -69,12 +69,12 @@ function git_changes() {
         git_pwd="$(basename -- "$(git rev-parse --show-toplevel)")"/"$(git rev-parse --show-prefix)"
         git_pwd_trim="$(echo ${git_pwd/%?/})"
         if test -z "$(git status --porcelain 2> /dev/null)"; then
-            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_}%{$reset_color%} '
+            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_}%f '
         else
-            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_} %F{yellow}X%{$reset_color%} '
+            PROMPT='%F{cyan}${git_pwd_trim} ${vcs_info_msg_0_} %F{yellow}X%f '
         fi
     else
-        PROMPT="%F{cyan}%~ %{$reset_color%}"
+        PROMPT="%F{cyan}%~%f "
     fi
 }
 

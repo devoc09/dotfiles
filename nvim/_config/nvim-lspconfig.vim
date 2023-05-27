@@ -40,6 +40,10 @@ nvim_lsp['ccls'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
+nvim_lsp['terraformls'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 nvim_lsp.rust_analyzer.setup {
     on_attach = on_attach,
     capabilities = capabilities,

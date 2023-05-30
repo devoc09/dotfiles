@@ -18,7 +18,7 @@ set nofoldenable
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 " colorscheme
-Plug 'devoc09/yami_q_ray'
+" Plug 'devoc09/yami_q_ray'
 
 "more beautiful and powerful syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -121,15 +121,21 @@ set hlsearch
 syntax enable
 
 " Important!!
-if exists('+termguicolors')
+" if exists('+termguicolors')
+"     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    " set termguicolors
+" endif
+if !empty($COLORTERM)
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
+else
+    set t_Co=256
 endif
-" set t_Co=256
 
 let g:rehash256 = 1
-colorscheme yami_q_ray
+colorscheme default
 " opacity settings
 " highlight Normal ctermbg=NONE guibg=NONE
 " highlight NonText ctermbg=NONE guibg=NONE

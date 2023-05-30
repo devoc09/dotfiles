@@ -16,7 +16,7 @@ require'nvim-treesitter.configs'.setup {
         "php"
     },
     highlight = {
-        enable = true,
+        enable = false,
     },
     endwise = {
         enable = true,

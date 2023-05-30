@@ -58,9 +58,14 @@ export TERM=xterm-256color
 # executes
 export PATH=$PATH:"$HOME/bin"
 
-# local plugins
-source "$HOME/dotfiles/zsh/git-prompt.sh"
-source "$HOME/dotfiles/zsh/fzf-binding.sh"
+# Setup Prompt
+PS1='%n@%m%F{white}:%F{green}%~%f $ '
+RPROMPT='%(?..%F{red}%?%f)'
+precmd() {
+    echo
+}
+# source "$HOME/dotfiles/zsh/git-prompt.sh"
+# source "$HOME/dotfiles/zsh/fzf-binding.sh"
 
 ## History share
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.

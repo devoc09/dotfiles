@@ -59,7 +59,7 @@ export TERM=xterm-256color
 export PATH=$PATH:"$HOME/bin"
 
 # Setup Prompt
-PS1='%n@%m%F{white}:%F{green}%~%f $ '
+PS1='%F{blue}%n@%m%F{white}:%F{green}%~%f$ '
 RPROMPT='%(?..%F{red}%?%f)'
 precmd() {
     echo

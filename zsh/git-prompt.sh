@@ -17,14 +17,4 @@ function git_changes() {
         PROMPT="%F{cyan}%~%f "
     fi
 }
-
-function add_newline() {
-    echo ""
-}
-
-function status_code() {
-    RPROMPT="%F{white}$(echo $?)"
-}
 add-zsh-hook precmd git_changes
-add-zsh-hook precmd add_newline
-add-zsh-hook precmd status_code

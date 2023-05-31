@@ -135,7 +135,10 @@ else
 endif
 
 let g:rehash256 = 1
-colorscheme default
+colorscheme retrobox
+hi LineNr ctermfg=208
+
+
 " opacity settings
 " highlight Normal ctermbg=NONE guibg=NONE
 " highlight NonText ctermbg=NONE guibg=NONE

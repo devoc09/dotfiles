@@ -64,14 +64,14 @@ nvim_lsp.rust_analyzer.setup {
 nvim_lsp['denols'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc", ".git"),
+    root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 }
---nvim_lsp.tsserver.setup {
---    on_attach = on_attach,
---    capabilities = capabilities,
---    cmd = {"typescript-language-server", "--stdio"},
---    filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
---}
+nvim_lsp.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = {"typescript-language-server", "--stdio"},
+    filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
+}
 nvim_lsp['pylsp'].setup {
     on_attach = on_attach,
     capabilities = capabilities,

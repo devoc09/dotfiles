@@ -13,6 +13,8 @@ require'nvim-treesitter.configs'.setup {
         "zig",
         "hcl",
         "vim",
+        "markdown",
+        "markdown_inline",
         "php"
     },
     highlight = {

@@ -62,6 +62,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'nvimdev/lspsaga.nvim'
 Plug 'hrsh7th/cmp-nvim-lua', {'for': 'lua'}
 Plug 'dcampos/cmp-snippy'
 
@@ -135,7 +136,7 @@ else
 endif
 
 let g:rehash256 = 1
-colorscheme retrobox
+colorscheme default
 hi LineNr ctermfg=208
 
 

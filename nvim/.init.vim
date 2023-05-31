@@ -138,6 +138,7 @@ endif
 let g:rehash256 = 1
 colorscheme default
 hi LineNr ctermfg=208
+hi NormalFloat ctermbg=NONE cterm=NONE
 
 
 " opacity settings

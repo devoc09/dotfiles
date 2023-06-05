@@ -125,7 +125,7 @@ syntax enable
 " if exists('+termguicolors')
 "     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    " set termguicolors
+"     set termguicolors
 " endif
 if !empty($COLORTERM)
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -139,6 +139,7 @@ let g:rehash256 = 1
 colorscheme default
 hi LineNr ctermfg=208
 hi NormalFloat ctermbg=NONE cterm=NONE
+hi Comment ctermfg=gray
 
 
 " opacity settings

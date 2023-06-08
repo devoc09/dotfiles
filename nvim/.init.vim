@@ -19,6 +19,7 @@ set nofoldenable
 call plug#begin('$HOME/.local/share/nvim/plugged')
 " colorscheme
 " Plug 'devoc09/yami_q_ray'
+Plug 'tomasr/molokai'
 
 "more beautiful and powerful syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -136,10 +137,11 @@ else
 endif
 
 let g:rehash256 = 1
-colorscheme default
-hi LineNr ctermfg=208
-hi NormalFloat ctermbg=NONE cterm=NONE
-hi Comment ctermfg=gray
+colorscheme molokai
+hi Normal ctermfg=255
+hi LineNr ctermfg=208 ctermbg=NONE
+" hi NormalFloat ctermbg=NONE cterm=NONE
+" hi Comment ctermfg=gray
 
 
 " opacity settings

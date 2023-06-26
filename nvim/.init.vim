@@ -49,6 +49,7 @@ Plug 'alvan/vim-closetag', {'for': ['html','xml']}
 Plug 'devoc09/uuid'
 Plug 'devoc09/nvim_hugo_date'
 Plug 'tpope/vim-surround'
+Plug 'mattn/vim-maketable', {'on': 'MakeTable'}
 Plug 'devoc09/gpt-trans.nvim', {'do': 'make'}
 " Plug 'lilydjwg/colorizer'
 

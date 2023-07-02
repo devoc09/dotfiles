@@ -41,7 +41,7 @@ Plug 'neovim/nvim-lspconfig'
 " for rust 
 " Plug 'rust-lang/rust.vim', {'for': 'rust'}
 " Terraform
-Plug 'hashivim/vim-terraform'
+" Plug 'hashivim/vim-terraform'
 
 " usefull
 Plug 'tpope/vim-commentary'

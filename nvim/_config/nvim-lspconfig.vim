@@ -75,6 +75,7 @@ nvim_lsp.tsserver.setup {
 nvim_lsp['pylsp'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
+    cmd = {'pyls'},
 }
 nvim_lsp['zls'].setup {
     on_attach = on_attach,

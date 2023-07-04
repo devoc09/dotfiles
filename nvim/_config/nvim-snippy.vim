@@ -1,5 +1,11 @@
 UsePlugin 'nvim-snippy'
 
+lua << EOF
+requrie('snippy').setup({
+  enable_auto = true,
+})
+EOF
+
 imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
 imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'

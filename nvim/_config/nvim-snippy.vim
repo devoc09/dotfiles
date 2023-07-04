@@ -1,7 +1,7 @@
 UsePlugin 'nvim-snippy'
 
 lua << EOF
-requrie('snippy').setup({
+require('snippy').setup({
   enable_auto = true,
 })
 EOF

@@ -9,6 +9,7 @@ else
 endif
 nn <C-p> <cmd>Telescope live_grep<cr>
 nn <C-b> <cmd>lua require('telescope.builtin').treesitter()<cr>
+nn gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
 lua << EOF
 require('telescope').setup{

@@ -1,3 +1,3 @@
 UsePlugin 'gpt-trans.nvim'
 
-let g:trans_lang_output = 'float'
+let g:trans_lang_output = 'default'

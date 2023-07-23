@@ -76,8 +76,12 @@ Plug 'dcampos/cmp-snippy'
 " Plug 'junegunn/fzf.vim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" require lua plugin async api
+" Gen AI
+Plug 'dpayne/CodeGPT.nvim'
+
+" require lua plugin async api & ui plugin
 Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 " easy way to cursol-move
 " Plug 'easymotion/vim-easymotion'

@@ -39,12 +39,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 nvim_lsp['clangd'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
+    filetypes = {"c", "cpp", "objc", "objcpp", "cuda"},
 }
 nvim_lsp['terraformls'].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-}
-nvim_lsp['bufls'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }

@@ -12,6 +12,7 @@ scriptencoding utf-8
 set fileencoding=utf-8
 set nocompatible
 set wildmenu
+set completeopt=menu,menuone
 let mapleader = "\<Space>"
 set mouse=
 set nofoldenable

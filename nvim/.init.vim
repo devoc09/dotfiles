@@ -20,7 +20,7 @@ set nofoldenable
 call plug#begin('$HOME/.local/share/nvim/plugged')
 " colorscheme
 " Plug 'devoc09/yami_q_ray'
-Plug 'tomasr/molokai'
+Plug 'devoc09/molokai'
 
 "more beautiful and powerful syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

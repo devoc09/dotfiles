@@ -78,7 +78,8 @@ Plug 'dcampos/cmp-snippy'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Gen AI
-Plug 'dpayne/CodeGPT.nvim'
+" Plug 'dpayne/CodeGPT.nvim'
+Plug 'github/copilot.vim'
 
 " require lua plugin async api & ui plugin
 Plug 'nvim-lua/plenary.nvim'

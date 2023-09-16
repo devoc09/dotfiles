@@ -6,5 +6,14 @@ local dir=$(ghq list -p | fzf)
     fi
     zle clear-screen
 }
+
+function fzf-history() {
+    BUFFER=$(history -n -r 1 | fzf --exact --reverse --query="$LBUFFER" --prompt="History > ")
+    CURSOR=${#BUFFER}
+    zle accept-line
+}
+
 zle -N fzf-ghq
+zle -N fzf-history
 bindkey '^]' fzf-ghq
+bindkey '^r' fzf-history

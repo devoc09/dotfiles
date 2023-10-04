@@ -14,7 +14,7 @@ window:
 # background_opacity: 0.9
 
 font:
-    size: 14
+    size: 12
     normal:
         family: "UDEV Gothic 35"
     bold:

@@ -88,6 +88,9 @@ Plug 'MunifTanjim/nui.nvim'
 " Plug 'easymotion/vim-easymotion'
 Plug 'phaazon/hop.nvim'
 
+" file explorer
+Plug 'lambdalisue/fern.vim'
+
 " Local Plugins
 " Plug '~/dotfiles/vim/togglewindow'
 " Plug '~/go/src/github.com/devoc09/uuid'

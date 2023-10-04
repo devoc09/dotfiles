@@ -89,7 +89,7 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'phaazon/hop.nvim'
 
 " file explorer
-Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern.vim', { 'on': 'Fern' }
 
 " Local Plugins
 " Plug '~/dotfiles/vim/togglewindow'

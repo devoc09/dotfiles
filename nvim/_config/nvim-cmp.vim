@@ -17,7 +17,14 @@ cmp.setup({
         end
     },
     sources = {
-        { name = 'nvim_lsp' },
+        {
+            name = 'nvim_lsp',
+            option = {
+              get_bufnrs = function()
+                return vim.api.nvim_list_bufs()
+              end
+            },
+        },
         { name = 'buffer' },
         { name = 'nvim_lua' },
         { name = 'snippy' },

@@ -79,6 +79,10 @@ nvim_lsp['pylsp'].setup {
     capabilities = capabilities,
     cmd = {'pyls'},
 }
+nvim_lsp['solargraph'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 nvim_lsp['zls'].setup {
     on_attach = on_attach,
     capabilities = capabilities,

@@ -8,6 +8,7 @@ require'nvim-treesitter.configs'.setup {
         "typescript",
         "tsx",
         "rust",
+        "ruby",
         "python",
         "lua",
         "zig",

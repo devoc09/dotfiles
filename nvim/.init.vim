@@ -142,13 +142,13 @@ if !empty($COLORTERM)
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 else
-    set t_Co=256
+    " set t_Co=256
 endif
 
-let g:rehash256 = 1
+" let g:rehash256 = 1
 colorscheme molokai
-hi Normal ctermfg=255
-hi LineNr ctermfg=208 ctermbg=NONE
+" hi Normal ctermfg=255
+" hi LineNr ctermfg=208 ctermbg=NONE
 " hi NormalFloat ctermbg=NONE cterm=NONE
 " hi Comment ctermfg=gray
 

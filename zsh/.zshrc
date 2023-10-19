@@ -46,7 +46,7 @@ export EDITOR=nvim
 # z command enhanced cd
 #eval "$(zoxide init zsh)"
 
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # golang
 # export PATH=$PATH:/usr/local/go/bin

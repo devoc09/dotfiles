@@ -29,3 +29,5 @@ nvimset:
 alacrittyset:
 	mkdir -p ~/.config/alacritty
 	ln -sf ~/dotfiles/terminals/alacritty.yml ~/.config/alacritty/
+weztermset:
+	ln -sf ~/dotfiles/terminals/wezterm/.wezterm.lua ~/.wezterm.lua

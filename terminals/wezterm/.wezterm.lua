@@ -12,4 +12,29 @@ config.font_size = 12
 
 config.colors = { foreground = '#f8f8f2'}
 
+-- keymaps
+act = wezterm.action
+config.keys = {
+    {
+        key = 'd',
+        mods = 'CMD',
+        action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+    },
+    {
+        key = 'd',
+        mods = 'CMD|SHIFT',
+        action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    },
+    {
+        key = '[',
+        mods = 'CMD',
+        action = act.ActivatePaneDirection 'Next',
+    },
+    {
+        key = ']',
+        mods = 'CMD',
+        action = act.ActivatePaneDirection 'Prev',
+    },
+}
+
 return config

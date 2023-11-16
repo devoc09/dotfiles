@@ -7,7 +7,7 @@ if wezterm.confing_builder then
 end
 
 config.color_scheme = 'Monokai Soda'
-config.font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = false})
+config.font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = false })
 config.font_size = 12
 
 config.colors = { foreground = '#f8f8f2'}
@@ -35,6 +35,11 @@ config.keys = {
         mods = 'CMD',
         action = act.ActivatePaneDirection 'Prev',
     },
+    {
+        key = 'j',
+        mods = 'CMD',
+        action = act.QuickSelect,
+    }
 }
 
 return config

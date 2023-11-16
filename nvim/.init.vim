@@ -175,6 +175,7 @@ nnoremap <Right> <C-w>><CR>
 nnoremap <Up> <C-w>+<CR>
 nnoremap <Down> <C-w>-<CR>
 nnoremap <S-o> <C-o>
+tnoremap <C-[> <C-\><C-n>
 
 " Move Windows.
 nnoremap sh <C-w>h

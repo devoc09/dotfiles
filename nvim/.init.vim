@@ -217,17 +217,17 @@ let nvrcmd      = "nvr --remote-wait"
 let $VISUAL     = nvrcmd
 let $GIT_EDITOR = nvrcmd
 nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig_status()<CR>
+autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
 function! s:tig_status() abort
     call s:open_term('tig status')
 endfunction
 function! s:open_term(cmd) abort
+    set noswapfile
+    set nobuflisted
     let split = s:split_type()
 
     call execute(printf('%s term://%s', split, a:cmd))
 
-    setlocal bufhidden=delete
-    setlocal noswapfile
-    setlocal nobuflisted
 endfunction
 function! s:split_type() abort
     " NOTE: my cell ratio: width:height == 1:2.1

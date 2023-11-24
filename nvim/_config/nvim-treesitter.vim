@@ -4,9 +4,11 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "go",
+        "java",
         "javascript",
         "typescript",
         "tsx",
+        "json",
         "rust",
         "ruby",
         "python",

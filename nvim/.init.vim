@@ -194,18 +194,18 @@ set cmdheight=1
 
 " use Termianl shortcut
 autocmd TermOpen * startinsert
-function s:vsplitTerm()
-    execute 'vsplit'
-    execute 'term'
-endfunction
-function s:splitTerm()
-    execute 'split'
-    execute 'term'
-endfunction
-command! -count -nargs=* Vsterm call s:vsplitTerm()
-command! -count -nargs=* Sterm call s:splitTerm()
-nmap <silent> tt :Vsterm<CR>
-nmap <silent> ts :Sterm<CR>
+func! s:Openterm() abort
+  let w = winwidth(win_getid())
+  let h = winheight(win_getid()) * 2.1
+  if h > w
+    exe 'split'
+    exe 'term'
+  else
+    exe 'vsplit'
+    exe 'term'
+  endif
+endfunc
+nmap <silent> tt :<C-u>silent call <SID>Openterm()<CR>
 
 " enhanced vimgrep auto cmd '| cw'
 autocmd QuickFixCmdPost *grep* cwindow
@@ -216,7 +216,7 @@ command! -count -nargs=* Path :echo expand('%s')
 let nvrcmd      = "nvr --remote-wait"
 let $VISUAL     = nvrcmd
 let $GIT_EDITOR = nvrcmd
-nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig_status()<CR>
+nnoremap <silent> ts :<C-u>silent call <SID>tig_status()<CR>
 autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
 function! s:tig_status() abort
     call s:open_term('tig status')

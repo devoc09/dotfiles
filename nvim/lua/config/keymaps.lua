@@ -46,3 +46,17 @@ vim.cmd([[
   endfunction
   nmap <silent> tt :<C-u>silent call <SID>Openterm()<CR>
 ]])
+
+-- Clear all buffers
+function clearBuffers()
+    local buffers = vim.api.nvim_list_bufs()
+
+    for _, buffer in ipairs(buffers) do
+        if vim.api.nvim_buf_get_option(buffer, "modified") then
+            print("Buffer " .. buffer .. "has unsaved changes")
+        else
+            vim.api.nvim_buf_delete(buffer, { force = true })
+        end
+    end
+end
+vim.api.nvim_set_keymap("n", "<Leader>c", ":lua clearBuffers()<cr>", { noremap = true, silent = true })

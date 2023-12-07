@@ -12,12 +12,18 @@ config.font_size = 12
 
 config.colors = {
     foreground = '#f8f8f2',
-    cursor_bg = '#fa8419',
+    cursor_bg = 'orange',
+    compose_cursor = 'orange',
 
     ansi = {
-        'black','red','green','#fa8419','#58d1eb','purple','cyan','white'
+        'black','red','green','orange','aqua','purple','cyan','white'
 
     },
+}
+
+config.inactive_pane_hsb = {
+    saturation = 0.9,
+    brightness = 0.5,
 }
 
 -- keymaps
@@ -51,3 +57,4 @@ config.keys = {
 }
 
 return config
+

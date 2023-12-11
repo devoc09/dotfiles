@@ -1,7 +1,7 @@
 vim.o.encoding = "utf-8"
 vim.o.fileformat = "unix"
 vim.o.fileencoding = "utf-8"
-vim.o.mouse = ""
+vim.o.mouse = "a"
 vim.o.foldenable = false
 vim.o.wildmenu = true
 vim.o.completeopt = "menu,menuone"

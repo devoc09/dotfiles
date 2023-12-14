@@ -13,12 +13,6 @@ starshipset:
 	ln -sf ~/dotfiles/shell/starship.toml ~/.config/starship.toml
 tmuxset:
 	ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-vimset:
-	# vim
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
-	ln -sf ~/dotfiles/vim/_config ~/.vim/_config
-	ln -sf ~/dotfiles/vim/ftplugin ~/.vim/ftplugin
 nvimset:
 	# neovim
 	mkdir -p ~/.config/nvim

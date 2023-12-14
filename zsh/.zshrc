@@ -30,7 +30,7 @@ fi
 autoload -Uz colors; colors
 autoload -Uz add-zsh-hook
 setopt prompt_subst
-alias ls='ls --color=auto'
+alias ls='ls --color'
 alias ll='ls -l'
 alias la='ls -la'
 alias l='ll -F'

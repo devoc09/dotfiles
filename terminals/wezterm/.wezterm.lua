@@ -7,6 +7,7 @@ if wezterm.confing_builder then
 end
 
 config.color_scheme = 'default'
+-- config.font = wezterm.font('Firge35Nerd Console', { weight = 'Bold', italic = false })
 config.font = wezterm.font('Firge35Nerd Console', { italic = false })
 config.font_size = 12
 
@@ -56,5 +57,16 @@ config.keys = {
     }
 }
 
-return config
+-- SSH Domains
+local ssh_domains = {}
+for host, config in pairs(wezterm.enumerate_ssh_hosts()) do
+    table.insert(ssh_domains, {
+        name = host,
+        remote_address = config["hostname"],
+        username = config["user"],
+        ssh_option = { identityfile = config["identityfile"] },
+    })
+end
+config.ssh_domains = ssh_domains
 
+return config

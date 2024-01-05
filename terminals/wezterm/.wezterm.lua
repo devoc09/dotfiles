@@ -7,7 +7,7 @@ if wezterm.confing_builder then
 end
 
 config.color_scheme = 'default'
-config.font = wezterm.font('Firge35Nerd Console', { weight = 'Bold', italic = false })
+config.font = wezterm.font('Firge35Nerd Console', { italic = false })
 config.font_size = 12
 
 config.colors = {

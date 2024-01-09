@@ -34,7 +34,3 @@ vim.o.laststatus = 0 -- hidden status line
 if os.getenv("COLORTERM") ~= nil then
     vim.o.termguicolors = true
 end
-
--- colorscheme
-vim.cmd("colorscheme default")
-vim.opt.background = "dark"

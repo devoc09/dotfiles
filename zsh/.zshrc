@@ -61,7 +61,7 @@ export PATH=$PATH:"$HOME/bin"
 # Setup Prompt
 case ${OSTYPE} in
     darwin* )
-        PS1='%n@%m%F{white}:%F{yellow}%~%f$ '
+        PS1='%n@%m%F{white}:%F{blue}%~%f$ '
         RPROMPT='%(?..%F{red}%?%f)'
         precmd() {
             echo

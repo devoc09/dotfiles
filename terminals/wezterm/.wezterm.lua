@@ -14,13 +14,16 @@ config.font_size = 12
 config.colors = {
     foreground = '#f8f8f2',
     cursor_bg = 'orange',
+    cursor_border = 'orange',
     compose_cursor = 'orange',
 
-    ansi = {
-        'black','red','green','orange','aqua','purple','cyan','white'
-
-    },
+    -- ansi = {
+    --     'black','red','green','orange','aqua','purple','cyan','white'
+    --
+    -- },
 }
+
+config.color_scheme = "Molokai"
 
 config.inactive_pane_hsb = {
     saturation = 0.9,

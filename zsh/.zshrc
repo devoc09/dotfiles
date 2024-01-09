@@ -68,7 +68,7 @@ case ${OSTYPE} in
         }
         ;;
     linux* )
-        PS1='%F{cyan}%n@%m%F{yellow}:%F{blue}%~%f$ '
+        PS1='%F{green}%n@%m%F{white}:%F{blue}%~%f$ '
         RPROMPT='%(?..%F{red}%?%f)'
         precmd() {
             echo

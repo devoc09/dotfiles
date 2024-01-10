@@ -10,6 +10,9 @@ vim.o.number = false
 -- vim.o.clipboard = 'unnamed'
 vim.o.belloff = 'all'
 
+-- enable set number
+vim.cmd('set number')
+
 -- Tab and Indentation
 vim.o.autoindent = true -- Continue indent of the previous line on newline
 vim.o.smartindent = true -- Auto-insert indentation according to syntax

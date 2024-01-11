@@ -26,8 +26,8 @@ vim.api.nvim_set_keymap('n', 'sl', '<C-w>l', { noremap = true })
 vim.api.nvim_set_keymap('n', '<S-i>', '<C-i>', { noremap = true })
 
 -- Switch tabs
-vim.api.nvim_set_keymap('n', '<S-Tab>', ':-tabnext<Return>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Tab>', ':tabnext<Return>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Tab>', 'gt', { noremap = true, silent = true })
 
 -- Set cmdheight
 vim.o.cmdheight = 1

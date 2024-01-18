@@ -11,7 +11,7 @@ vim.o.number = false
 vim.o.belloff = 'all'
 
 -- enable set number
-vim.cmd('set number')
+-- vim.cmd('set number')
 
 -- Tab and Indentation
 vim.o.autoindent = true -- Continue indent of the previous line on newline

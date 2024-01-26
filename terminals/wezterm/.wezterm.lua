@@ -31,6 +31,10 @@ config.inactive_pane_hsb = {
     brightness = 0.5,
 }
 
+-- scrollbar
+config.enable_scroll_bar = true
+config.scrollback_lines = 10000
+
 -- keymaps
 act = wezterm.action
 config.keys = {

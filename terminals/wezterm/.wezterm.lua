@@ -62,7 +62,13 @@ config.keys = {
         key = 'j',
         mods = 'CMD',
         action = act.QuickSelect,
-    }
+    },
+    {
+        key = 'w',
+        mods = 'CMD',
+        action = wezterm.action.CloseCurrentPane { confirm = true },
+    },
+
 }
 
 -- SSH Domains

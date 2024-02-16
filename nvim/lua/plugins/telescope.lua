@@ -28,6 +28,7 @@ return {
             },
             pickers = {
                 find_files = {
+                    find_command = { "rg", "--files", "--hidden", "--no-ignore", "--follow", "--glob", "!.git" },
                     theme = "ivy",
                 },
                 git_files = {

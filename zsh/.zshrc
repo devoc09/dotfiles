@@ -59,25 +59,23 @@ export TERM=xterm-256color
 export PATH=$PATH:"$HOME/bin"
 
 # Setup Prompt
+source "$HOME/dotfiles/zsh/git-prompt.sh"
 case ${OSTYPE} in
     darwin* )
-        PS1='%n@%m%F{white}:%F{blue}%~%f$ '
+        PS1='%n@%m%F{white}:%F{blue}%~%f($git_branch)$ '
         RPROMPT='%(?..%F{red}%?%f)'
         precmd() {
             echo
         }
         ;;
     linux* )
-        PS1='%F{green}%n@%m%F{white}:%F{blue}%~%f$ '
+        PS1='%F{green}%n@%m%F{white}:%F{blue}%~%f($git_branch)$ '
         RPROMPT='%(?..%F{red}%?%f)'
         precmd() {
             echo
         }
         ;;
 esac
-# PS1='%F{blue}%n@%m%F{white}:%F{green}%~%f$ '
-# source "$HOME/dotfiles/zsh/git-prompt.sh"
-# source "$HOME/dotfiles/zsh/fzf-binding.sh"
 
 ## History share
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.

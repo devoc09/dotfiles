@@ -12,7 +12,6 @@ vim.api.nvim_set_keymap('n', '<Left>', '<C-w><<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Right>', '<C-w>><CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Up>', '<C-w>+<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Down>', '<C-w>-<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<S-o>', '<C-o>', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-[>', '<C-\\><C-n>', { noremap = true })
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap("n", "<ScrollWheelUp>", "<C-Y>", { noremap = true })

@@ -5,7 +5,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-buffer",
-		"dcampos/cmp-snippy",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -16,11 +15,6 @@ return {
 			mapping = {
 				["<C-n>"] = cmp.mapping.select_next_item(),
 				["<C-p>"] = cmp.mapping.select_prev_item(),
-			},
-			snippet = {
-				expand = function(args)
-					require("snippy").expand_snippet(args.body)
-				end
 			},
 			sources = {
 				{
@@ -43,7 +37,6 @@ return {
 						end
 					},
 				},
-				{ name = "snippy" },
 				{ name = "path" },
 			},
 		})

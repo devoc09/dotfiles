@@ -82,12 +82,12 @@ return {
 		    capabilities = capabilities,
 		    cmd = {"gopls", "serve"},
 		    settings = {
-			gopls = {
-			    analyses = {
-				unusedparams = true,
-			    },
-			    staticcheck = true,
-			},
+                gopls = {
+                    analyses = {
+                        unusedparams = true,
+                    },
+                    staticcheck = true,
+                },
 		    },
 		}
 		function OrgImports(wait_ms)

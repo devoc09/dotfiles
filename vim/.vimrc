@@ -14,7 +14,7 @@ let mapleader = '\<Space>'
 let s:settings_config_dir = expand('~/.vim')
 let s:settings_plugin_path = expand(s:settings_config_dir . '/plugins')
 if empty(glob(s:settings_config_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.settings_config_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  silent execute '!curl -fLo '.s:settings_config_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endi
 

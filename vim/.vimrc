@@ -20,16 +20,16 @@ endi
 
 let g:plug_shallow = 0
 call plug#begin(s:settings_plugin_path)
-	Plug 'devoc09/tender.vim'
-    Plug 'tpope/vim-endwise'
-    Plug 'tpope/vim-commentary'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'prabirshrestha/asyncomplete.vim'
-    Plug 'prabirshrestha/asyncomplete-file.vim'
-    Plug 'prabirshrestha/asyncomplete-buffer.vim'
-    Plug 'prabirshrestha/asyncomplete-lsp.vim'
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'mattn/vim-lsp-settings'
+Plug 'devoc09/tender.vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 " gui options
@@ -72,7 +72,6 @@ set hlsearch
 " statusline
 set laststatus=2
 set showtabline=1
-set signcolumn=yes
 
 " grep
 if executable('rg') | set grepprg=rg\ --no-heading\ --hidden\ -g\ '!.git/'\ --vimgrep grepformat=%f:%l:%c:%m | endi
@@ -106,43 +105,47 @@ set completeopt=menuone,noinsert,noselect,preview
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() . "\<cr>" : "\<cr>"
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'allowlist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
+      \ 'name': 'file',
+      \ 'allowlist': ['*'],
+      \ 'priority': 10,
+      \ 'completor': function('asyncomplete#sources#file#completor')
+      \ }))
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'allowlist': ['*'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ 'config': {
-    \    'max_buffer_size': 5000000,
-    \  },
-    \ }))
+      \ 'name': 'buffer',
+      \ 'allowlist': ['*'],
+      \ 'completor': function('asyncomplete#sources#buffer#completor'),
+      \ 'config': {
+        \    'max_buffer_size': 5000000,
+        \  },
+        \ }))
 
 " vim-lsp
 function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gs <plug>(lsp-document-symbol-search)
-    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> gh <plug>(lsp-hover)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+  setlocal omnifunc=lsp#complete
+  if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> gs <plug>(lsp-document-symbol-search)
+  nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+  nmap <buffer> gr <plug>(lsp-references)
+  nmap <buffer> gi <plug>(lsp-implementation)
+  nmap <buffer> gt <plug>(lsp-type-definition)
+  nmap <buffer> <leader>rn <plug>(lsp-rename)
+  nmap <buffer> gh <plug>(lsp-hover)
+  nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+  nmap <buffer> ]g <plug>(lsp-next-diagnostic)
 
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs call execute('LspDocumentFormatSync')
-    autocmd! BufWritePre *.go call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
-    
-    " refer to doc to add more commands
+  let g:lsp_format_sync_timeout = 1000
+  autocmd! BufWritePre *.rs call execute('LspDocumentFormatSync')
+  autocmd! BufWritePre *.go call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
+
+  " refer to doc to add more commands
 endfunction
 
 augroup lsp_install
-    au!
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+  au!
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" filetypes
+au! FileType go,python setlocal autoindent smartindent expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au! FileType vim setlocal autoindent smartindent expandtab tabstop=2 softtabstop=2 shiftwidth=2

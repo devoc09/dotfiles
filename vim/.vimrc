@@ -42,6 +42,7 @@ if !has('gui_running') | set t_Co=256 | endif
 set termguicolors
 set guicursor=a:blinkon0
 set background=dark
+set cursorline
 
 " colorscheme
 silent! colorscheme tender

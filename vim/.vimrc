@@ -74,10 +74,9 @@ set laststatus=2
 set showtabline=1
 set signcolumn=yes
 
-if executable('rg')
-    set grepprg=rg\ --no-heading\ --vimgrep
-    set grepformat=%f:%l:%c:%m
-endi
+" grep
+if executable('rg') | set grepprg=rg\ --no-heading\ --hidden\ -g\ '!.git/'\ --vimgrep grepformat=%f:%l:%c:%m | endi
+au QuickfixCmdPost grep,grepadd,vimgrep cwindow
 
 " split
 set splitright
@@ -94,6 +93,9 @@ nnoremap <silent>sj <C-w>j
 nnoremap <silent>sl <C-w>l
 nnoremap <silent><S-Tab> gT
 nnoremap <silent><Tab> gt
+nnoremap <silent><C-n> :silent cnext<CR>
+nnoremap <silent><C-p> :silent cprev<CR>
+nnoremap <silent><C-c> :silent cclose<CR>
 
 " easymotion
 let g:EasyMotion_do_mapping = 0

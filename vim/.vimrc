@@ -40,13 +40,18 @@ Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 " gui options
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-if !has('gui_running') | set t_Co=256 | endif
-set termguicolors
+if !has('gui_running') && (&t_Co == 256 || $COLORTERM == 'truecolor')
+    set t_Co=256
+    " Enable true color support
+    if $COLORTERM == 'truecolor'
+        set termguicolors
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+endif
 set guicursor=a:blinkon0
 set background=dark
 set cursorline

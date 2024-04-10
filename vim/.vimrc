@@ -15,6 +15,7 @@ set ruler
 set shortmess=F
 set ttimeoutlen=50
 set ttyfast
+set sidescroll=1
 
 " vim-plug installation
 let s:settings_config_dir = expand('~/.vim')

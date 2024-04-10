@@ -100,8 +100,8 @@ nnoremap <silent>sj <C-w>j
 nnoremap <silent>sl <C-w>l
 nnoremap <silent><S-Tab> gT
 nnoremap <silent><Tab> gt
-nnoremap <silent><C-n> :silent cnext<CR>
-nnoremap <silent><C-p> :silent cprev<CR>
+nnoremap <silent><C-j> :silent cnext<CR>
+nnoremap <silent><C-k> :silent cprev<CR>
 nnoremap <silent><C-c> :silent cclose<CR>
 
 " easymotion

@@ -9,6 +9,12 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set nobackup noswapfile
 let mapleader = '\<Space>'
+set autoread
+set fsync
+set ruler
+set shortmess=F
+set ttimeoutlen=50
+set ttyfast
 
 " vim-plug installation
 let s:settings_config_dir = expand('~/.vim')

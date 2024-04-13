@@ -37,6 +37,8 @@ Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " gui options
@@ -162,3 +164,12 @@ augroup END
 " filetypes
 au! FileType go,python setlocal autoindent smartindent expandtab tabstop=4 softtabstop=4 shiftwidth=4
 au! FileType vim setlocal autoindent smartindent expandtab tabstop=2 softtabstop=2 shiftwidth=2
+
+" fzf
+let g:fzf_vim = {}
+let g:fzf_vim.buffers_jump = 1
+if executable('rg')
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git"'
+  nnoremap <silent><C-p> :silent Rg<CR>
+endi
+nnoremap <silent><C-f> :silent Files<CR>

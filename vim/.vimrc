@@ -150,6 +150,13 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> ]g <plug>(lsp-next-diagnostic)
 
   let g:lsp_format_sync_timeout = 1000
+  let g:lsp_diagnostics_enabled = 1
+  let g:lsp_format_sync_timeout = 1000
+  let g:lsp_diagnostics_virtual_text_enabled = 1
+  let g:lsp_diagnostics_virtual_text_prefix = ">>> "
+  let g:lsp_diagnostics_virtual_text_align = "after"
+  let g:lsp_diagnostics_float_cursor = 1
+
   autocmd! BufWritePre *.rs call execute('LspDocumentFormatSync')
   autocmd! BufWritePre *.go call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
 

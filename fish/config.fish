@@ -3,6 +3,9 @@ set -g -x fish_greeting
 
 
 function fish_prompt --description 'define iteractive shell prompt'
+    # insert new line befor prompt
+    echo
+
     # username & hostname
     set -l short_hostname (hostname | cut -d . -f 1)
     set_color normal

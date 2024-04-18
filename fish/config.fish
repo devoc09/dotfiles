@@ -18,5 +18,14 @@ function fish_prompt --description 'define iteractive shell prompt'
     echo -n $git_branch; echo -n '$ '
 end
 
+function fish_right_prompt --description 'define interactive shell prompt right'
+    # exit code
+    set -l last_status $status
+    if test $last_status -ne 0
+        set_color red
+        echo -n ' '$last_status
+    end
+end
+
 alias ls='ls --color=always'
 funcsave ls

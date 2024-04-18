@@ -67,7 +67,6 @@ set belloff=all
 set cmdheight=1
 set noshowmode
 set hidden
-set nowrap
 set nofoldenable
 
 " indent

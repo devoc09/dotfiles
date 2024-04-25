@@ -2,6 +2,7 @@
 require("config/keymaps")
 require("config/autocmds")
 require("config/options")
+require("config/filetype")
 
 -- disable builtin plugins
 local disabled_built_ins = {

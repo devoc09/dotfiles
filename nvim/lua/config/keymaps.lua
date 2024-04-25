@@ -28,6 +28,11 @@ vim.api.nvim_set_keymap('n', '<S-i>', '<C-i>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Tab>', 'gt', { noremap = true, silent = true })
 
+-- quickfix window
+vim.api.nvim_set_keymap("n", "<C-j>", ":cnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", ":cprev<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-c>", ":cclose<CR>", { noremap = true, silent = true })
+
 -- Set cmdheight
 vim.o.cmdheight = 1
 

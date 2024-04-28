@@ -10,7 +10,7 @@ config.color_scheme = 'default'
 -- `SF Mono` is apple font
 -- config.font = wezterm.font('SF Mono', { weight = 'Bold', italic = false })
 config.font = wezterm.font('Firge35Nerd Console', { italic = false })
-config.font_size = 12
+config.font_size = 11
 
 config.colors = {
     cursor_bg = 'orange',

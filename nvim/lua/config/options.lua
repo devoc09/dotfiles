@@ -6,12 +6,12 @@ vim.o.foldenable = false
 vim.o.wildmenu = true
 vim.o.completeopt = "menu,menuone"
 vim.o.number = false
--- vim.o.cursorline = true
+vim.o.cursorline = true
 -- vim.o.clipboard = 'unnamed'
 vim.o.belloff = 'all'
 
 -- enable set number
--- vim.cmd('set number')
+vim.cmd('set number')
 
 -- Tab and Indentation
 vim.o.autoindent = true -- Continue indent of the previous line on newline

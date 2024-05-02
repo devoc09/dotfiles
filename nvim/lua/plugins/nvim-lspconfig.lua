@@ -33,50 +33,6 @@ return {
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		
-		-- nvim_lsp["clangd"].setup {
-		-- 	on_attach = on_attach,
-		-- 	capabilities = capabilities,
-		-- 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
-		-- }
-		-- nvim_lsp["terraformls"].setup {
-		-- 	on_attach = on_attach,
-		-- 	capabilities = capabilities,
-		-- }
-		-- nvim_lsp["rust_analyzer"].setup {
-		-- 	on_attach = on_attach,
-		-- 	capabilities = capabilities,
-		-- 	cmd = { "rust-analyzer" },
-		-- 	settings = {
-		-- 		assist = {
-		-- 			importGranularity = "module",
-		-- 			importPrefix = "self",
-		-- 		},
-		-- 		cargo = {
-		-- 			loadOutDirsFromCheck = true
-		-- 		},
-		-- 		procMacro = {
-		-- 			enable = true
-		-- 		},
-		-- 	}
-		-- }
-		-- nvim_lsp['pyright'].setup {
-		--     on_attach = on_attach,
-		--     capabilities = capabilities,
-		--     cmd = {'pyright-langserver', '--stdio'},
-		--     settings = {
-		--       python = {
-		-- 	venvPath = ".",
-		-- 	pythonPath = "./.venv/bin/python",
-		-- 	analysis = {
-		-- 	  extraPaths = {"."},
-		-- 	  autoSearchPaths = true,
-		-- 	  diagnosticMode = "openFilesOnly",
-		-- 	  typeCheckingMode = "off",
-		-- 	  useLibraryCodeForTypes = false,
-		-- 	}
-		--       }
-		--     }
-		-- }
 		nvim_lsp['gopls'].setup {
 		    on_attach = on_attach,
 		    capabilities = capabilities,
@@ -90,20 +46,24 @@ return {
                 },
 		    },
 		}
-		function OrgImports(wait_ms)
-			local params = vim.lsp.util.make_range_params()
-			params.context = {only = {"source.organizeImports"}}
-			local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-			for _, res in pairs(result or {}) do
-			    for _, r in pairs(res.result or {}) do
-			      if r.edit then
-				vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
-			      else
-				vim.lsp.buf.execute_command(r.command)
-			      end
-			    end
-			  end
-		end
-		vim.api.nvim_create_autocmd({"BufWritePre"}, { pattern = {"*.go"}, command = "lua OrgImports(1000)"})
+    -- format on save
+    vim.api.nvim_create_autocmd({'BufWritePre'}, {
+      pattern = {"*.py"},
+      callback = function() vim.lsp.buf.format({ timeout=1500, async=false }) end,
+    })
+
+    -- imports & format on save
+    vim.api.nvim_create_autocmd({'BufWritePre'}, {
+      pattern = {"*.go"},
+      callback = function(args)
+        vim.lsp.buf.code_action({
+          context={only={ 'source.organizeImports' }},
+          apply = true
+        })
+        vim.wait(100)
+        vim.lsp.buf.format({ timeout=1500, async=false })
+      end,
+    })
+
 	end,
 }

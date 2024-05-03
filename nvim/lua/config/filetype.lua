@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "go", "python" },
+  pattern = { "go", "python", "c", "zig" },
   callback = function()
     vim.opt_local.autoindent = true
     vim.opt_local.smartindent = true
@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "vim", "lua" },
+  pattern = { "vim", "lua", "sh" },
   callback = function()
     vim.opt_local.autoindent = true
     vim.opt_local.smartindent = true

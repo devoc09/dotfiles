@@ -31,7 +31,7 @@ vim.o.splitright = true
 
 -- statusline & tabline
 vim.o.showtabline = 1
-vim.o.laststatus = 3 -- hidden status line
+vim.o.laststatus = 3
 
 -- guicolors
 if os.getenv("COLORTERM") ~= nil then

@@ -29,16 +29,16 @@ return {
             pickers = {
                 find_files = {
                     find_command = { "rg", "--files", "--hidden", "--follow", "--glob", "!.git" },
-                    theme = "ivy",
+                    -- theme = "ivy",
                 },
                 git_files = {
-                    theme ="ivy",
+                    -- theme ="ivy",
                 },
                 git_status = {
-                    theme ="ivy",
+                    -- theme ="ivy",
                 },
                 live_grep = {
-                    theme ="ivy",
+                    -- theme ="ivy",
                 },
             },
             fzf = {

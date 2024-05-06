@@ -21,20 +21,20 @@ config.color_schemes = {
     -- [4] = "#00dbea" /* blue    */
     -- [5] = "#9b8fcb" /* magenta */
     -- [6] = "#f771be" /* cyan    */
-    -- [7] = "#b8b8ba" /* white   */
-    -- [8] = "#282a2e" /* black   */
+    -- [7] = "#d2cdf4" /* white   */
+    -- [8] = "#485890" /* black   */
     -- [9] = "#c24163" /* red     */
     -- [10] = "#6eb35f" /* green   */
     -- [11] = "#c3a664" /* yellow  */
     -- [12] = "#00919b" /* blue    */
     -- [13] = "#9372af" /* magenta */
     -- [14] = "#ca5c9c" /* cyan    */
-    -- [15] = "#485890" /* white   */
+    -- [15] = "#b8b8ba" /* white   */
     -- [256] = "#1d1f21", /* background */
     -- [257] = "#d2cdf4", /* foreground */
 
     foreground = '#d2cdf4',
-    background = '#1d1f21',
+    background = '#333333',
     cursor_bg = 'orange',
     cursor_fg = 'orange',
     cursor_border = 'orange',
@@ -43,36 +43,25 @@ config.color_schemes = {
     scrollbar_thumb = '#222222',
     split = '#444444',
     ansi = {
-      '#373b41',
+      '#333333',
       '#ff5682',
       '#7fd06e',
-      '#ffd982',
+      '#f771be',
       '#00dbea',
       '#9b8fcb',
-      '#f771be',
-      '#b8b8ba',
+      '#ffd982',
+      '#d2cdf4',
     },
     brights = {
-      '#282a2e',
+      '#485890',
       '#c24163',
       '#6eb35f',
-      '#c3a664',
+      '#ca5c9c',
       '#00919b',
       '#9372af',
-      '#ca5c9c',
-      '#485890',
+      '#c3a664',
+      '#b8b8ba',
     },
-    indexed = { [136] = '#af8700' },
-    compose_cursor = 'orange',
-    copy_mode_active_highlight_bg = { Color = '#000000' },
-    copy_mode_active_highlight_fg = { AnsiColor = 'Black' },
-    copy_mode_inactive_highlight_bg = { Color = '#52ad70' },
-    copy_mode_inactive_highlight_fg = { AnsiColor = 'White' },
-
-    quick_select_label_bg = { Color = 'peru' },
-    quick_select_label_fg = { Color = '#ffffff' },
-    quick_select_match_bg = { AnsiColor = 'Navy' },
-    quick_select_match_fg = { Color = '#ffffff' },
   },
 }
 

@@ -33,19 +33,19 @@ return {
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		
-		nvim_lsp['gopls'].setup {
-		    on_attach = on_attach,
-		    capabilities = capabilities,
-		    cmd = {"gopls", "serve"},
-		    settings = {
-                gopls = {
-                    analyses = {
-                        unusedparams = true,
-                    },
-                    staticcheck = true,
-                },
-		    },
-		}
+    nvim_lsp['gopls'].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      cmd = {"gopls", "serve"},
+      settings = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+        },
+      },
+    }
     -- format on save
     vim.api.nvim_create_autocmd({'BufWritePre'}, {
       pattern = {"*.py"},

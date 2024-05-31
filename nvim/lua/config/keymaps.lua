@@ -23,6 +23,7 @@ vim.api.nvim_set_keymap('n', 'sk', '<C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('n', 'sj', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('n', 'sl', '<C-w>l', { noremap = true })
 vim.api.nvim_set_keymap('n', '<S-i>', '<C-i>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<CR><CR>', '<C-w>w', { noremap = true })
 
 -- Switch tabs
 vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', { noremap = true, silent = true })
@@ -65,4 +66,7 @@ function clearBuffers()
         end
     end
 end
-vim.api.nvim_set_keymap("n", "<Leader>c", ":lua clearBuffers()<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>cl', ':lua clearBuffers()<cr>', { noremap = true, silent = true })
+
+-- yank current buffer file path
+vim.api.nvim_set_keymap('n', ';c', ':let @0=expand("%:p")<CR>', { noremap = true, silent = true })

@@ -31,7 +31,6 @@ end
 
 -- install plugin manager lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-print(lazypath)
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -46,7 +45,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 -- plugins entry point
 require("lazy").setup({
-	spec = {
-		{ import = "plugins" },
-	},
+	spec = {{ import = "plugins" }},
+  change_detection = {
+    notify = false,
+  },
 })

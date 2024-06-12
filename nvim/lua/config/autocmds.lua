@@ -34,3 +34,11 @@ local function tig_status()
   open_term('tig status')
 end
 
+-- set nonumber when temrinal open
+vim.api.nvim_create_autocmd({'TermOpen'}, {
+  pattern = '*',
+  callback = function()
+    vim.opt_local.number = false
+  end
+})
+

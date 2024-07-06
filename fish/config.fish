@@ -30,5 +30,16 @@ function fish_right_prompt --description 'define interactive shell prompt right'
     end
 end
 
+# repository selector using fzf
+function fzf_select_ghq_list --description 'Select a directory from the ghq list'
+  ghq list --full-path | fzf --no-sort --reverse --ansi | read selected
+  [ -n "$selected" ]; and cd "$selected"
+  commandline -f repaint
+end
+
+function fish_user_key_bindings
+    bind \x1d fzf_select_ghq_list
+end
+
 alias ls='ls --color=always'
 funcsave ls

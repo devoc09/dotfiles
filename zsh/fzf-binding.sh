@@ -1,5 +1,5 @@
 function fzf-ghq() {
-local dir=$(ghq list -p | fzf)
+local dir=$(ghq list -p | fzf --no-sort --reverse --ansi)
     if [ -n "$dir" ]; then
         BUFFER="cd ${dir}"
         zle accept-line

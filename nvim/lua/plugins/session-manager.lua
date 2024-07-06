@@ -1,12 +1,15 @@
 return {
   'devoc09/session-manager.nvim',
-  event = 'BufReadPre',
-  opts = {}
+  opts = {
+    auto_load = true,
+  }
 }
 
 -- for local development
 -- return {
 --   dir = '/home/kumico/go/src/github.com/devoc09/session-manager.nvim',
---   event = 'BufReadPre',
---   opts = {}
+--   event = 'ColorScheme',
+--   opts = {
+--     auto_load = true,
+--   },
 -- }

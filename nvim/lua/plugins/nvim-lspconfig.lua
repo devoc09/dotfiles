@@ -47,6 +47,21 @@ return {
         },
       },
     }
+    nvim_lsp['lua_ls'].setup {
+      settings = {
+        Lua = {
+          runtime = {
+            version = 'LuaJIT',
+            path = vim.split(package.path, ';')
+          },
+          workspace = {
+            checkThirdParty = false,
+            library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+          },
+        }
+      },
+    }
+
     -- format on save
     vim.api.nvim_create_autocmd({'BufWritePre'}, {
       pattern = {"*.py"},

@@ -8,7 +8,6 @@ return {
 -- for local development
 -- return {
 --   dir = '/home/kumico/go/src/github.com/devoc09/session-manager.nvim',
---   event = 'ColorScheme',
 --   opts = {
 --     auto_load = true,
 --   },

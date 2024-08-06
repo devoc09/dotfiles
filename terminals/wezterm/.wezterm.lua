@@ -12,6 +12,10 @@ config.color_scheme = 'default'
 config.font = wezterm.font('Firge35Nerd Console', { italic = false })
 config.font_size = 11
 
+-- startup size
+config.initial_rows = 80
+config.initial_cols = 230
+
 config.color_schemes = {
   ['lflops'] = {
     -- [0]  = "#373b41" /* black   */

@@ -72,13 +72,13 @@ return {
 
     -- format on save
     vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-      pattern = { '*.lua' },
+      pattern = { '*.lua', '*.rs' },
       callback = function() vim.lsp.buf.format({ timeout = 1500, async = false }) end,
     })
 
     -- imports & format on save
     vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-      pattern = { '*.go', '*.rust' },
+      pattern = { '*.go' },
       callback = function(args)
         vim.lsp.buf.code_action({
           context = { only = { 'source.organizeImports' } },

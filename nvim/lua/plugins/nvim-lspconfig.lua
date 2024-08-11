@@ -46,6 +46,15 @@ return {
         },
       },
     }
+    nvim_lsp['rust_analyzer'].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        ['rust-analyzer'] = {
+          diagnostic = { enable = false, }
+        }
+      },
+    }
     nvim_lsp['lua_ls'].setup {
       settings = {
         Lua = {
@@ -69,7 +78,7 @@ return {
 
     -- imports & format on save
     vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-      pattern = { '*.go' },
+      pattern = { '*.go', '*.rust' },
       callback = function(args)
         vim.lsp.buf.code_action({
           context = { only = { 'source.organizeImports' } },

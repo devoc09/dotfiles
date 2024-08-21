@@ -9,7 +9,7 @@ vim.o.number = false
 vim.o.cursorline = true
 -- vim.o.clipboard = 'unnamed'
 vim.o.belloff = 'all'
-vim.o.scrolloff = 8
+vim.o.scrolloff = 999 -- Keep the cursor centered in the screen
 
 -- enable set number
 vim.cmd('set number')
@@ -38,3 +38,5 @@ vim.o.laststatus = 3
 if os.getenv("COLORTERM") ~= nil then
   vim.o.termguicolors = true
 end
+
+vim.o.colorcolumn = "100" -- Highlight 100 character limit

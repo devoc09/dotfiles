@@ -18,7 +18,7 @@ function fish_prompt --description 'define iteractive shell prompt'
     # prompt synbol
     set_color normal
     set -l git_branch (__fish_git_prompt | string trim -c ' ')
-    echo -n $git_branch; echo -n '$ '
+    echo $git_branch; echo -n '$ '
 end
 
 function fish_right_prompt --description 'define interactive shell prompt right'

@@ -2,7 +2,7 @@ return {
   'akinsho/toggleterm.nvim',
   version = "*",
   keys = {
-    { ';t', '<cmd>lua ToggleTig()<CR>' }
+    { '<Leader>ti', '<cmd>lua ToggleTig()<CR>' }
   },
   config = function()
     local Terminal = require('toggleterm.terminal').Terminal
@@ -12,7 +12,7 @@ return {
       hidden = true,
       direction = 'float',
       on_open = function(term)
-        vim.api.nvim_buf_set_keymap(term.bufnr, 't', ';t', '<cmd>close<cr>', { noremap = true, silent = true })
+        vim.api.nvim_buf_set_keymap(term.bufnr, 't', '<Leader>ti', '<cmd>close<cr>', { noremap = true, silent = true })
       end,
     })
     function ToggleTig()

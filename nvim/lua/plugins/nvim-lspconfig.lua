@@ -56,17 +56,27 @@ return {
       },
     }
     nvim_lsp['lua_ls'].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
       settings = {
         Lua = {
           runtime = {
-            version = 'LuaJIT',
-            path = vim.split(package.path, ';')
+            version = "LuaJIT",
+            pathStrict = true,
+            path = { "?.lua", "?/init.lua" },
+          },
+          diagnostics = {
+            globals = { 'vim' },
           },
           workspace = {
-            checkThirdParty = false,
-            library = { [vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true },
+            library = vim.list_extend(vim.api.nvim_get_runtime_file("lua", true), {
+              "${3rd}/luv/library",
+              "${3rd}/busted/library",
+              "${3rd}/luassert/library",
+            }),
+            checkThirdParty = "Disable",
           },
-        }
+        },
       },
     }
 

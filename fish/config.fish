@@ -1,6 +1,21 @@
 #------------------------------------------------------
+# syntax highlighting
+#------------------------------------------------------
+set fish_color_error red
+set fish_color_normal normal
+set fish_color_command normal
+set fish_color_quote green
+set fish_color_redirection yellow
+set fish_color_option normal
+set fish_color_status normal
+set fish_color_param normal
+set fish_color_escape purple
+set fish_color_end normal
+
+#------------------------------------------------------
 # prompt
 #------------------------------------------------------
+
 # disable welcome message
 set -g -x fish_greeting
 
@@ -16,7 +31,6 @@ function fish_prompt --description 'define iteractive shell prompt left'
     echo -en "\e[34m"(prompt_pwd)"\e[0m"
 
     # prompt synbol
-    #set_color normal
     set -l git_branch (__fish_git_prompt | string trim -c ' ')
     echo -e "$git_branch\n"'$ '
 end
@@ -30,7 +44,6 @@ function fish_right_prompt --description 'define interactive shell prompt right'
     end
 end
 
-# repository selector using fzf
 function fzf_select_ghq_list --description 'Select a directory from the ghq list'
   ghq list --full-path | fzf --no-sort --reverse --ansi | read selected
   [ -n "$selected" ]; and cd "$selected"
@@ -44,5 +57,13 @@ end
 #------------------------------------------------------
 # aliases
 #------------------------------------------------------
-alias ls='ls --color=always'
-funcsave ls
+alias vi='nvim'
+alias vim='nvim'
+
+#------------------------------------------------------
+# custom commands
+#------------------------------------------------------
+
+#------------------------------------------------------
+# PATH
+#------------------------------------------------------

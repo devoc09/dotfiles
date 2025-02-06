@@ -10,7 +10,7 @@ cursor-style-blink = false
 font-family = "UDEV Gothic 35NFLG"
 font-family-bold = "UDEV Gothic 35NFLG Bold"
 font-style = default
-font-size = 15
+font-size = 13
 
 # Color palette
 background = #0c172a

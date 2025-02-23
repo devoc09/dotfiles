@@ -7,9 +7,9 @@ macos-titlebar-style = tabs
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "SF Mono Square"
+font-family = "SF Mono Square Bold"
 font-family-bold = "SF Mono Square Bold"
-font-size = 18
+font-size = 14
 
 # Color palette
 background = #0c172a

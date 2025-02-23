@@ -7,10 +7,9 @@ macos-titlebar-style = tabs
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "UDEV Gothic 35NFLG"
-font-family-bold = "UDEV Gothic 35NFLG Bold"
-font-style = default
-font-size = 13
+font-family = "SF Mono Square"
+font-family-bold = "SF Mono Square Bold"
+font-size = 18
 
 # Color palette
 background = #0c172a

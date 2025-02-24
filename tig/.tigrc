@@ -2,4 +2,4 @@ bind main R !git rebase -i %(commit)
 bind diff R !git rebase -i %(commit)
 bind main D !sh -c "git difftool %(commit)~ %(commit)"
 bind status P !git push origin %(branch)
-set commit-options = --signoff
+bind status C !git commit --signoff

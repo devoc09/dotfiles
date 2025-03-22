@@ -7,8 +7,8 @@ macos-titlebar-style = tabs
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "Source Code Pro Regular"
-font-family-bold = "SF Mono Square SemiBold"
+font-family = "Source Code Pro"
+font-style = "SemiBold"
 font-size = 13
 
 # Color palette

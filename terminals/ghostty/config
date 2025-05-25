@@ -38,3 +38,5 @@ palette = 14=#ca5c9c
 # white
 palette = 7=#d2cdf4
 palette = 15=#b8b8ba
+
+split-divider-color = "#485890"

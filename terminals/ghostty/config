@@ -12,31 +12,62 @@ font-style = "Bold"
 font-size = 16
 
 # Color palette
-background = #0c172a
-foreground= #d2cdf4
-# black
-palette = 0=#333333
-palette = 8=#485890
-# red
-palette = 1=#ff5682
-palette = 9=#c24163
-# green
-palette = 2=#7fd06e
-palette = 10=#6eb35f
-# yellow
-palette = 3=#ffd982
-palette = 11=#c3a664
-# blue
-palette = 4=#00dbea
-palette = 12=#00919b
-# purple
-palette = 5=#9b8fcb
-palette = 13=#9372af
-# cyan
-palette = 6=#f771be
-palette = 14=#ca5c9c
-# white
-palette = 7=#d2cdf4
-palette = 15=#b8b8ba
+# lflops scheme
+# background = #0c172a
+# foreground= #d2cdf4
+# # black
+# palette = 0=#333333
+# palette = 8=#485890
+# # red
+# palette = 1=#ff5682
+# palette = 9=#c24163
+# # green
+# palette = 2=#7fd06e
+# palette = 10=#6eb35f
+# # yellow
+# palette = 3=#ffd982
+# palette = 11=#c3a664
+# # blue
+# palette = 4=#00dbea
+# palette = 12=#00919b
+# # purple
+# palette = 5=#9b8fcb
+# palette = 13=#9372af
+# # cyan
+# palette = 6=#f771be
+# palette = 14=#ca5c9c
+# # white
+# palette = 7=#d2cdf4
+# palette = 15=#b8b8ba
+#
+# split-divider-color = "#485890"
 
-split-divider-color = "#485890"
+# sphere scheme
+background = #1d1c1e
+foreground = #fefefe
+# black
+palette = 0=#1d1c1e
+palette = 8=#4e4e4e
+# red
+palette = 1=#ff7074
+palette = 9=#fe95a0
+# green
+palette = 2=#498791
+palette = 10=#244c51
+# yellow
+palette = 3=#ff9548
+palette = 11=#ffb74d
+# blue
+palette = 4=#75ace9
+palette = 12=#b8e7e1
+# purple
+palette = 5=#827ff5
+palette = 13=#a6ace9
+# cyan
+palette = 6=#6887ad
+palette = 14=#344359
+# white
+palette = 7=#fefefe
+palette = 15=#ccb08f
+
+split-divider-color = "#344359"

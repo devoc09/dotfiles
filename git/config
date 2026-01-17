@@ -1,0 +1,22 @@
+[user]
+	name = Takumi Katase
+	email = <EMAIL_ADDRESS>
+	signingkey = <KEY_PATH>
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[ghq]
+	vcs = git
+	root = ~/go/src/
+[core]
+	editor = nvim
+
+[difftool]
+    prompt = true
+
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d -R \"$LOCAL\" \"$REMOTE\""

@@ -9,7 +9,7 @@ cursor-style = block
 cursor-style-blink = false
 
 font-family = "Berkeley Mono"
-font-style = "Retina"
+font-style = "Bold"
 font-size = 15
 
 # theme

@@ -8,8 +8,8 @@ macos-titlebar-style = tabs
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "SF Mono Square"
-font-style = "Bold"
+font-family = "Berkeley Mono"
+font-style = "Retina"
 font-size = 16
 
 # theme

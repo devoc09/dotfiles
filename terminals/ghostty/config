@@ -1,6 +1,8 @@
 # keybinds
 keybind = super+d=new_split:right
+keybind = chain=equalize_splits
 keybind = super+shift+d=new_split:down
+keybind = chain=equalize_splits
 keybind = shift+enter=text:\n
 
 # style
@@ -15,3 +17,4 @@ font-size = 15
 # theme
 theme = sphere
 background-opacity = 0.95
+# background-opacity = 1
